@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal"
+        android:padding="0dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/barcode_content"
+            android:textColor="#000000" />
+
+        <EditText
+            android:id="@+id/barcode_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="0dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/barcode_width"
+            android:textColor="#000000" />
+
+        <EditText
+            android:id="@+id/barcode_width"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/width_value"
+            android:inputType="number" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/barcode_height"
+            android:textColor="#000000" />
+
+        <EditText
+            android:id="@+id/barcode_height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/height_value"
+            android:inputType="number" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/barcode_type"
+            android:textColor="#000000" />
+
+        <Spinner
+            android:id="@+id/generate_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/primary_text_color"
+            android:entries="@array/spinnerarr_type" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/barcode_margin"
+            android:textColor="#000000" />
+
+        <Spinner
+            android:id="@+id/generate_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/primary_text_color"
+            android:entries="@array/spinnerarr_margin" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/barcode_color"
+            android:textColor="#000000" />
+
+        <Spinner
+            android:id="@+id/generate_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/primary_text_color"
+            android:entries="@array/spinnerarr_color" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/barcode_backgroundcolor"
+            android:textColor="#000000" />
+
+        <Spinner
+            android:id="@+id/generate_backgroundcolor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/primary_text_color"
+            android:entries="@array/spinnerarr_backgroundcolor" />
+    </LinearLayout>
+
+
+    <Button
+        android:layout_width="310dp"
+        android:layout_height="36dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@color/black"
+        android:onClick="generateCodeBtnClick"
+        android:text="@string/generate_barcode"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textSize="16sp" />
+
+    <Button
+        android:layout_width="310dp"
+        android:layout_height="36dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@color/black"
+        android:onClick="saveCodeBtnClick"
+        android:text="@string/save_barcode"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/barcode_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp" />
+
+</LinearLayout>
